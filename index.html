@@ -14,23 +14,44 @@
       margin: 0;
       padding: 0;
       height: 100%;
-      background: #000;
+      background: black;
       overflow: hidden;
     }
 
     #unity-container {
+      width: 100%;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      position: relative;
     }
 
     canvas {
-      width: auto !important;
       height: 100vh !important;
+      width: auto !important;
       aspect-ratio: 9 / 16;
+      display: block;
+    }
+
+    #unity-footer,
+    #unity-loading-bar,
+    #unity-warning {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      text-align: center;
+      z-index: 2;
+    }
+
+    #unity-fullscreen-button {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      z-index: 3;
     }
   </style>
+
 
 
 </head>
